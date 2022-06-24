@@ -1,0 +1,39 @@
+// 반응형 - pc/mobile
+@media (max-width: 1200px) {
+  .inner {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .header {
+    h1 {
+      width: 5rem;
+    }
+    .header-utils {
+      .header-search {
+        display: none;
+      }
+      .gnb {
+        ul {
+          li {
+            margin-right: 1.2rem;
+            &:last-child {
+              margin-right: 0;
+            }
+            svg {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  // main
+}

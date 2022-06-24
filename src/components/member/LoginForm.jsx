@@ -1,6 +1,9 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -53,11 +56,18 @@ const LoginForm = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
 
-    //로컬스토리지에 저장
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-
-    alert("로그인 되었습니다.");
+    if (
+      localStorage.getItem("email") === email &&
+      localStorage.getItem("password") === password
+    ) {
+      alert("등록된 이메일, 패스워드와 일치합니다.");
+    } else {
+      //로컬스토리지에 저장
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+      alert("로그인 되었습니다.");
+      navigate("/");
+    }
   };
 
   //이메일 유효성 검사 함수
@@ -80,7 +90,7 @@ const LoginForm = () => {
       return false;
     }
     const pwRegex =
-      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}/g;
+      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&~]{8,}/g;
 
     //비밀번호 형식이 맞지 않을 경우
     if (!pwRegex.test(v)) {
@@ -98,7 +108,7 @@ const LoginForm = () => {
         ref={inputEmail}
         onChange={onChangeHandler}
         placeholder="이메일"
-        className={statusEmail ? "" : "error"}
+        className={(statusEmail ? "" : "error") + " w100"}
       />
       <input
         type="password"
@@ -106,7 +116,7 @@ const LoginForm = () => {
         ref={inputPw}
         onChange={onChangeHandler}
         placeholder="비밀번호"
-        className={statusPw ? "" : "error"}
+        className={(statusPw ? "" : "error") + " w100"}
       />
       <button
         type="submit"

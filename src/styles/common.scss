@@ -4,13 +4,20 @@ input {
   padding: 0.2rem 0.8rem;
   background: $color-gray;
   border: 1px solid $color-grayline;
-  width: 100%;
   border-radius: 0.2rem;
   &:focus {
     border-color: $color-grayline2;
   }
+  &.w100 {
+    width: 100%;
+  }
   &.error {
     border: 1px solid $color-error;
+  }
+  &.search {
+    height: 2.7rem;
+    background-color: $color-graybg2;
+    border-color: $color-graybg2;
   }
 }
 

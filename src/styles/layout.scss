@@ -1,15 +1,63 @@
 @import "./variable";
-@import "./function";
+@import "./mixin";
 @import "./common.scss";
 
 // layout
 .container {
   background: $color-gray;
-  .inner {
+}
+.inner {
+  width: 975px;
+  margin: 0 auto;
+}
+//header
+.header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 0;
+  background-color: $color-white;
+  h1 {
+    width: 7rem;
+    img {
+      width: 100%;
+    }
+  }
+  .header-utils {
+    @include flexBetweenCenter;
+
+    .header-search {
+      position: relative;
+      input {
+        width: 16rem;
+        padding-left: 2.4rem;
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 1.1rem;
+        color: $color-gray2;
+      }
+    }
+    .gnb {
+      ul {
+        @include flexEnd;
+        li {
+          margin-right: 1.8rem;
+          &:last-child {
+            margin-right: 0;
+          }
+          svg {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
   }
 }
 
-// login ---------- start
+// login ---------- start 반응형 X
 .login {
   position: fixed;
   top: 0;
@@ -125,3 +173,11 @@
   }
 }
 // login ---------- end
+
+.main {
+  padding: 1rem 10rem 5rem;
+  // background-color: $color-gray;
+  background-color: bisque;
+}
+
+@import "./responsive.scss";

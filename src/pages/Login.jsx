@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/base/Layout";
 import LoginForm from "../components/member/LoginForm";
 import { FaFacebookSquare } from "react-icons/fa";
 

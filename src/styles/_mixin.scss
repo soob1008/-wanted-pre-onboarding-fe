@@ -14,3 +14,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin flexEnd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

@@ -1,15 +1,23 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import GlobalStyles from './styles/globalStyles';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import GlobalStyles from "./styles/globalStyles";
+import "./styles/layout.scss";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./App";
+import Login from "./pages/Login";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <GlobalStyles />
     <BrowserRouter>
-      <App />
+      <Routes>
+        {/* 홈 */}
+        <Route path="/" element={<App />} />
+        {/* 로그인 */}
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
