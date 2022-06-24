@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaSearch, FaHome, FaRegPaperPlane } from "react-icons/fa";
+import { AiOutlineSearch, AiOutlineHome, AiOutlineSend } from "react-icons/ai";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -24,18 +24,18 @@ const Header = () => {
             />
           </h1>
           <div className="header-search">
-            <FaSearch />
+            <AiOutlineSearch />
             <input type="text" placeholder="검색" className="search" />
           </div>
           <nav className="gnb">
             <ul>
               <li>
                 <Link to="/">
-                  <FaHome />
+                  <AiOutlineHome />
                 </Link>
               </li>
               <li>
-                <FaRegPaperPlane />
+                <AiOutlineSend />
               </li>
               <li>
                 <button type="button" onClick={onLogout}>

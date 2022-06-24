@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/base/Layout";
-import FeedItem from "../components/feed/FeedItem";
+import FeedList from "../components/feed/FeedList";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -19,14 +19,6 @@ const Home = () => {
         <FeedList />
       </div>
     </Layout>
-  );
-};
-
-const FeedList = () => {
-  return (
-    <ul>
-      <FeedItem />
-    </ul>
   );
 };
 

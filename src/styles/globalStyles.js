@@ -18,8 +18,12 @@ const GlobalStyles = createGlobalStyle`
    color: #000;
  }
  button {
+   padding: 0;
    background: none;
    cursor: pointer;
+ }
+ strong {
+   font-weight: bold;
  }
 `;
 
