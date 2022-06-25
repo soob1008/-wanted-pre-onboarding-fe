@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <GlobalStyles />
-    <BrowserRouter>
-      <Routes basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/wanted-pre-onboarding-fe">
+      <Routes>
         {/* 홈 */}
         <Route path="/" element={<App />} />
         {/* 로그인 */}
