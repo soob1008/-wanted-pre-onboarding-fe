@@ -18,10 +18,12 @@ const Header = () => {
       <div className="inner">
         <div className="header-utils">
           <h1>
-            <img
-              src={require("../../assets/images/logo.png")}
-              alt="인스타그램"
-            />
+            <Link to="/">
+              <img
+                src={require("../../assets/images/logo.png")}
+                alt="인스타그램"
+              />
+            </Link>
           </h1>
           <div className="header-search">
             <AiOutlineSearch />

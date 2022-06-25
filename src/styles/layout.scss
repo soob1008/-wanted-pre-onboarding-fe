@@ -72,7 +72,6 @@
 
 .login-form {
   width: 350px;
-  height: 396px;
   padding: 40px 40px 20px;
   background: $color-white;
   border: 1px solid $color-grayline;
@@ -172,19 +171,30 @@
 // login ---------- end
 
 .main {
-  padding: 1rem 10rem 5rem;
-  // background-color: $color-gray;
-  background-color: bisque;
+  padding: 1rem 15rem 5rem;
+  background-color: $color-gray;
+  min-height: 90vh;
   .feed {
     width: 470px;
     margin: 0 auto;
+    .loading {
+      padding-top: 2rem;
+      text-align: center;
+      svg {
+        font-size: 1.8rem;
+      }
+    }
   }
   .feed-item {
+    display: none;
     overflow: hidden;
     margin-bottom: 1rem;
     background-color: $color-white;
     border: 1px solid $color-grayline;
     border-radius: 0.5rem;
+    &.on {
+      display: block;
+    }
   }
   .feed-info {
     @include flexBetweenCenter;
@@ -207,6 +217,13 @@
       font-size: 1.5rem;
     }
   }
+
+  .feed-img {
+    img {
+      width: 100%;
+    }
+  }
+
   .feed-utils {
     padding: 1.5rem 1rem;
     .feed-menu {
@@ -228,6 +245,7 @@
       margin-top: 1rem;
       & > strong {
         display: block;
+        font-size: 0.8rem;
       }
       ul {
         margin-top: 1rem;
@@ -238,6 +256,7 @@
           }
           p {
             line-height: 1.2;
+            font-size: 0.8rem;
           }
           strong {
             margin-right: 0.8rem;

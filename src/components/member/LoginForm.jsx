@@ -5,23 +5,33 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const [inputs, setInputs] = useState({
+    user: "",
     email: "",
     password: "",
   });
+  const inputId = useRef();
   const inputEmail = useRef();
   const inputPw = useRef();
 
   //이메일, 비밀번호 유효성 검사 상태 저장
+  const [statusId, setStatusId] = useState(true);
   const [statusEmail, setStatusEmail] = useState(true);
   const [statusPw, setStatusPw] = useState(true);
   const [statusBtn, setstatesBtn] = useState(false);
   //비구조화 할당
-  const { email, password } = inputs;
+  const { user, email, password } = inputs;
 
   //input change event
   const onChangeHandler = (e) => {
+    const idCurrent = inputId.current.value;
     const emailCurrent = inputEmail.current.value;
     const pwCurrent = inputPw.current.value;
+
+    if (idCurrent !== "") {
+      setStatusId(true);
+    } else {
+      setStatusId(false);
+    }
 
     //이메일 유효성
     if (validationEmail(email)) {
@@ -38,7 +48,11 @@ const LoginForm = () => {
     }
 
     //이메일 && 비밀번호 유효성 검사 - 버튼 disabled 여부
-    if (validationEmail(emailCurrent) && validationPassword(pwCurrent)) {
+    if (
+      idCurrent !== "" &&
+      validationEmail(emailCurrent) &&
+      validationPassword(pwCurrent)
+    ) {
       setstatesBtn(true);
     } else {
       setstatesBtn(false);
@@ -63,6 +77,7 @@ const LoginForm = () => {
       alert("등록된 이메일, 패스워드와 일치합니다.");
     } else {
       //로컬스토리지에 저장
+      localStorage.setItem("user", user);
       localStorage.setItem("email", email);
       localStorage.setItem("password", password);
       alert("로그인 되었습니다.");
@@ -102,6 +117,14 @@ const LoginForm = () => {
 
   return (
     <form method="post" onSubmit={onSubmitHandler}>
+      <input
+        type="text"
+        name="user"
+        ref={inputId}
+        onChange={onChangeHandler}
+        placeholder="닉네임"
+        className={(statusId ? "" : "error") + " w100"}
+      />
       <input
         type="text"
         name="email"

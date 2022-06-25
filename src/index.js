@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <>
     <GlobalStyles />
     <BrowserRouter>
       <Routes>
@@ -19,5 +19,5 @@ root.render(
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+  </>
 );

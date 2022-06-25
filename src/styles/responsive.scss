@@ -1,17 +1,18 @@
 // 반응형 - pc/mobile
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   .inner {
     width: 100%;
     padding: 0 1rem;
+  }
+  .main {
+    padding: 1rem 8rem 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .inner {
-    width: 100%;
-    padding: 0 1rem;
+  .main {
+    padding: 1rem 0;
   }
-
   .header {
     h1 {
       width: 5rem;
@@ -36,4 +37,10 @@
     }
   }
   // main
+  .main {
+    padding: 1rem 0;
+    .feed {
+      width: 100%;
+    }
+  }
 }
