@@ -100,8 +100,13 @@ const Feed = ({ feed }) => {
                 <AiOutlinePushpin />
               </button>
             </div>
-            <div className="feed-comment_list">
+            <div className="feed-content">
               <strong>좋아요 {feed.like}개</strong>
+
+              <p>{feed.content}</p>
+            </div>
+            {/* 댓글 */}
+            <div className="feed-comment_list">
               <ul>
                 {comments.map((v, idx) => (
                   <li key={idx}>

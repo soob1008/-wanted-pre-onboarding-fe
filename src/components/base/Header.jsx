@@ -6,6 +6,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const onLogout = () => {
+    localStorage.removeItem("user");
     localStorage.removeItem("email");
     localStorage.removeItem("password");
 

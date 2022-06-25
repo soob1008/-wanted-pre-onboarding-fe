@@ -10,7 +10,8 @@
   width: 975px;
   margin: 0 auto;
 }
-//header
+
+// header ------- start
 .header {
   position: sticky;
   top: 0;
@@ -53,6 +54,7 @@
     }
   }
 }
+//header ---------- end
 
 // login ---------- start 반응형 X
 .login {
@@ -168,8 +170,9 @@
     }
   }
 }
-// login ---------- end
+// login ------------ end
 
+// main / feed ---------- start
 .main {
   padding: 1rem 15rem 5rem;
   background-color: $color-gray;
@@ -241,12 +244,22 @@
         font-size: 1.5rem;
       }
     }
-    .feed-comment_list {
-      margin-top: 1rem;
+
+    .feed-content {
+      margin-top: 0.5rem;
       & > strong {
         display: block;
         font-size: 0.8rem;
       }
+      p {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .feed-comment_list {
+      margin-top: 1rem;
+
       ul {
         margin-top: 1rem;
         li {
@@ -293,5 +306,6 @@
     }
   }
 }
+// main -------- end
 
 @import "./responsive.scss";
