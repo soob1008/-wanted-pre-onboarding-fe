@@ -16,7 +16,7 @@ https://soob108.notion.site/Front-End-Developer-d807636973ed4b409684c47389d52bc7
 
 ---
 
-icon : react-icons 사용
+icon : react-icons 사용  
 로컬 스토리지에 이메일이 저장되어 있지 않을 경우 alert 창이 뜨고
 로그인 화면으로 이동되도록 처리
 
@@ -77,8 +77,8 @@ localStorage.setItem("user", user);
 />
 ```
 
-statusId 상태값에 따라 .error 클래스로 border 추가.
-인풋에 입력하면 onChangeHandler가 실행됨. 닉네임 칸이 비워져있거나 이메일, 비밀번호 유효성 검사를 통과하지 못했을 경우 헤당 인풋에 레드라인이 보이고 버튼이 비활성화됩니다. 모든 조건을 만족할 경우 버튼이 활성화됩니다. 값은 ref의 current.value로 받아옵니다.
+statusId 상태값에 따라 .error 클래스로 border를 추가하였습니다.
+인풋에 입력하면 onChangeHandler가 실행됩니다. 닉네임 칸이 비워져있거나 이메일, 비밀번호 유효성 검사를 통과하지 못했을 경우 헤당 인풋에 레드라인이 보이고 버튼이 비활성화됩니다. 모든 조건을 만족할 경우 버튼이 활성화됩니다. 값은 ref의 current.value로 받아옵니다.
 onSubmitHandler 함수는 로컬스토리지에 담긴 값이 입력한 값과 같은지 검사하고 같으면 alert창 다르면 값을 넣어줍니다.
 
 ## Assignment4 - `Routing`
@@ -129,6 +129,6 @@ inputComment.current.value = "";
 
 ## 보완해야할 부분
 
-**효율적인 컴포넌트 구조에 대한 고민**
-**onLoad 이벤트 렌더링 문제**
+**효율적인 컴포넌트 구조에 대한 고민**  
+**onLoad 이벤트 렌더링 문제**  
 onLoad이벤트에서 loaded가 true로 바뀌었을 때, 컴포넌트를 어떻게 렌더링할지 어려움이 있었습니다. img 태그가 {loaded && 컴포넌트(img 태그 포함)} 조건문에 따라서 보이게 되면 요소 자체가 없기 때문에 요소가 뜨지 않습니다. 그래서 구현은 이미지 태그는 존재하고 그 외에 요소만 loaded가 true일 경우에 보이도록 했고 상위 요소에 `className={"feed-item " + (loaded && "on")}`로 on 클래스 존재 여부로 자연스럽게 보이도록 했습니다. 좋은 방식으로 구현한 예제가 있다면 참고하고 싶습니다.
