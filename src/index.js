@@ -12,7 +12,7 @@ root.render(
   <>
     <GlobalStyles />
     <BrowserRouter>
-      <Routes>
+      <Routes basename={process.env.PUBLIC_URL}>
         {/* 홈 */}
         <Route path="/" element={<App />} />
         {/* 로그인 */}
