@@ -2,7 +2,7 @@
 
 ## 배포
 
-https://soob1008.github.io/wanted-pre-onboarding-fe/login
+https://soob1008.github.io/wanted-pre-onboarding-fe/
 
 ## 김수빈
 
