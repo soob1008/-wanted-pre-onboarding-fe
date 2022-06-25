@@ -5,15 +5,15 @@ import Feeds from "../components/feed/Feeds";
 import Axios from "axios";
 
 const Home = () => {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const [feeds, setFeeds] = useState();
   const path = `${process.env.PUBLIC_URL}/data/feedData.json`;
 
   useEffect(() => {
-    // if (!localStorage.getItem("email") || !localStorage.getItem("email")) {
-    //   alert("로그인 해주세요.");
-    //   navigate("/login");
-    // }
+    if (!localStorage.getItem("email")) {
+      alert("로그인 해주세요.");
+      navigate("/login");
+    }
 
     const fetchData = async () => {
       try {

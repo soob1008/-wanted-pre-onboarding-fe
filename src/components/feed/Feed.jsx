@@ -32,7 +32,7 @@ const Feed = ({ feed }) => {
     setComment(value);
   };
 
-  //게시 버튼 클릭 이벤트
+  //댓글 게시 버튼 클릭 이벤트
   const onPostClickHandeler = (e) => {
     setCommentFunc();
   };

@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <GlobalStyles />
-    <BrowserRouter basename="/wanted-pre-onboarding-fe">
+    <BrowserRouter basename="/wanted-pre-onboarding-fe/login">
       <Routes>
         {/* 홈 */}
         <Route path="/" element={<App />} />
