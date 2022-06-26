@@ -6,11 +6,11 @@
 
 ## 배포
 
-[배포페이지](https://soob1008.github.io/wanted-pre-onboarding-fe/)
+[배포페이지](https://soob1008.github.io/wanted-pre-onboarding-fe/){:target="_blank"}
 
 #### 이력서
 
-[노션 이력서](https://soob108.notion.site/Front-End-Developer-d807636973ed4b409684c47389d52bc7)
+[노션 이력서](https://soob108.notion.site/Front-End-Developer-d807636973ed4b409684c47389d52bc7){:target="_blank"}
 
 # :: 과제
 
