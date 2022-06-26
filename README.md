@@ -1,18 +1,18 @@
 # :: 원티드 프리온보딩 프론트엔드 코스 사전과제
 
-## 배포
-
-https://soob1008.github.io/wanted-pre-onboarding-fe/
-
 ## 김수빈
 
 1년차 프론트엔드 개발자로 개발 스킬을 증진시키고 취업을 목표로 공부하고 싶어 프리온보딩 코스에 참가신청을 합니다.
 
+## 배포
+
+[배포페이지](https://soob1008.github.io/wanted-pre-onboarding-fe/)
+
 #### 이력서
 
-https://soob108.notion.site/Front-End-Developer-d807636973ed4b409684c47389d52bc7
+[노션 이력서](https://soob108.notion.site/Front-End-Developer-d807636973ed4b409684c47389d52bc7)
 
-# :: 과제 목록
+# :: 과제
 
 ---
 
