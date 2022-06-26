@@ -138,6 +138,6 @@ inputComment.current.value = "";
 **onLoad 이벤트 렌더링 문제**  
 onLoad이벤트에서 loaded가 true로 바뀌었을 때, 컴포넌트를 어떻게 렌더링할지 어려움이 있었습니다. img 태그가 {loaded && 컴포넌트(img 태그 포함)} 조건문에 따라서 보이게 되면 요소 자체가 없기 때문에 요소가 뜨지 않습니다. 그래서 구현은 이미지 태그는 존재하고 그 외에 요소만 loaded가 true일 경우에 보이도록 했고 상위 요소에 `className={"feed-item " + (loaded && "on")}`로 on 클래스 존재 여부로 자연스럽게 보이도록 했습니다. 좋은 방식으로 구현한 예제가 있다면 참고하고 싶습니다.
 
-**React.StrictMode**
+**React.StrictMode**. 
 App 내의 잠재적인 문제를 알아내기 위한 도구로
 두 번 렌더링 된다. 개발할 때는 사용하는 것이 좋다.
