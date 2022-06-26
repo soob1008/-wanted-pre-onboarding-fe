@@ -44,7 +44,7 @@ const idCurrent = inputId.current.value;
 <input type="text" name="user" ref={inputId} />;
 ```
 
-useRef: DOM 요소에 접근하기 위해 사용되는 hook
+useRef: DOM 요소에 접근하기 위해 사용되는 hook  
 useRef를 통해 현재 입력 값을 받아와서 로컬 스토리지에 저장해줍니다.
 
 ```js
