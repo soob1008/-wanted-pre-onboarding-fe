@@ -6,11 +6,9 @@
 
 ## 배포
 
-[배포페이지](https://soob1008.github.io/wanted-pre-onboarding-fe/)
+<a href="https://soob1008.github.io/wanted-pre-onboarding-fe/" target="_blank">과제 배포 페이지</a>
 
-#### 이력서
-
-[노션 이력서](https://soob108.notion.site/Front-End-Developer-d807636973ed4b409684c47389d52bc7)
+**메인화면 - 로컬스토리 이메일 없으면 로그인 창으로 이동하도록 처리**
 
 # :: 과제
 
@@ -64,7 +62,7 @@ localStorage.setItem("user", user);
 
 - 이메일, 비밀번호 정규표현식을 사용하였고 비밀번호의 경우에는 소문자는 상관없이 대문자, 숫자 특수문자가 반드시 포함되도록 했습니다.
 - 이메일과 비밀번호가 로컬스토리지에 등록된 값과 동일하면 alert이 뜹니다.
-- error 클래스를 추가하여 input 형식 구분
+- onChange 이벤트로 error 클래스를 추가하여 input 에러 구분
 
 ```js
 <input
@@ -77,9 +75,8 @@ localStorage.setItem("user", user);
 />
 ```
 
-statusId 상태값에 따라 .error 클래스로 border를 추가하였습니다.
-인풋에 입력하면 onChangeHandler가 실행됩니다. 닉네임 칸이 비워져있거나 이메일, 비밀번호 유효성 검사를 통과하지 못했을 경우 헤당 인풋에 레드라인이 보이고 버튼이 비활성화됩니다. 모든 조건을 만족할 경우 버튼이 활성화됩니다. 값은 ref의 current.value로 받아옵니다.
-onSubmitHandler 함수는 로컬스토리지에 담긴 값이 입력한 값과 같은지 검사하고 같으면 alert창 다르면 값을 넣어줍니다.
+유효성 검사 후 상태값에 따라 error 클래스로 border를 추가하였습니다. 인풋에 입력하면 onChangeHandler가 실행됩니다. 닉네임 칸이 비워져있거나 이메일, 비밀번호 유효성 검사를 통과하지 못했을 경우 해당 인풋에 레드라인이 보이고 버튼이 비활성화됩니다. 모든 조건을 만족할 경우 버튼이 활성화됩니다. 값은 ref의 current.value로 받아옵니다.
+onSubmitHandler 함수는 로컬스토리지에 담긴 값이 입력한 값과 같은지 검사하고 같으면 alert창을 띄워주고 다르면 값을 넣어줍니다.
 
 ## Assignment4 - `Routing`
 
@@ -120,9 +117,16 @@ loaded가 true일 경우 요소들이 뜨도록 합니다.
 
 onClick, onKeyDown 이벤트로 댓글 입력을 받습니다. 엔터키 값을 경우엔 `e.key === 'Enter'`로 구분해줍니다. feedData.json에서 받아온 기존 댓글들을 스프레드 연산자로 받아와서 담아주고 새로 입력한 댓글을 함께 추가해 줍니다. 입력 후에 useRef를 사용하여 input 값을 초기화 해줍니다.
 
-키보드 입력 시에 한글을 입력할 때 두 번 실행되는 이슈가 있었습니다. `KeyboardEvent.isComposing`은 입력된 문자가 조합 문자인지 아닌지를 반환하는 함수를 사용하여 조건문에 추가해주었습니다.
+키보드 입력 할 때 한글을 입력하면 두 번 실행되는 이슈가 있었습니다. `KeyboardEvent.isComposing`은 입력된 문자가 조합 문자인지 아닌지를 반환하는 함수로 이를 사용하여 조건문에 추가해주었습니다.
 
 ```js
+//댓글 키보드 입력 이벤트
+const onPostPressHandeler = (e) => {
+  if (e.key === "Enter" && e.nativeEvent.isComposing === false) {
+    setCommentFunc();
+  }
+};
+
 //초기화
 inputComment.current.value = "";
 ```
