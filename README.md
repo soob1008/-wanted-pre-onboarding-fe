@@ -8,7 +8,7 @@
 
 <a href="https://soob1008.github.io/wanted-pre-onboarding-fe/" target="_blank">과제 배포 페이지</a>
 
-**메인화면 - 로컬스토리 이메일 없으면 로그인 창으로 이동하도록 처리**
+**메인화면 - 로컬스토리지 이메일 없으면 로그인 창으로 이동하도록 처리**
 
 # :: 과제
 
