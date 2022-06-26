@@ -20,11 +20,11 @@ icon : react-icons 사용
 
 ## 파일 구조
 
-> /assets - 이미지
-> /components/base - 공통 컴포넌트 폴더
-> /components/feed - 피드 관련 컴포넌트 폴더
-> /components/member - 로그인 컴포넌트 폴더
-> /pages - 페이지 파일이 있는 폴더
+> /assets - 이미지  
+> /components/base - 공통 컴포넌트 폴더  
+> /components/feed - 피드 관련 컴포넌트 폴더  
+> /components/member - 로그인 컴포넌트 폴더  
+> /pages - 페이지 파일이 있는 폴더  
 > /styles - css/scss 파일이 있는 폴더
 
 ## Assignment 1 - `Login`
