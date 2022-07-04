@@ -33,12 +33,12 @@ const Feed = ({ feed }) => {
   };
 
   //댓글 게시 버튼 클릭 이벤트
-  const onPostClickHandeler = (e) => {
+  const onPostClickHandler = (e) => {
     setCommentFunc();
   };
 
   //엔터키 입력 이벤트
-  const onPostPressHandeler = (e) => {
+  const onPostPressHandler = (e) => {
     if (e.key === "Enter" && e.nativeEvent.isComposing === false) {
       setCommentFunc();
     }
@@ -127,10 +127,10 @@ const Feed = ({ feed }) => {
                 className="w100"
                 ref={inputComment}
                 onChange={onChangeComment}
-                onKeyDown={onPostPressHandeler}
+                onKeyDown={onPostPressHandler}
               />
             </div>
-            <button type="button" onClick={onPostClickHandeler}>
+            <button type="button" onClick={onPostClickHandler}>
               게시
             </button>
           </div>
